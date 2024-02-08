@@ -1,6 +1,7 @@
 package main
 
 import (
+	"BookApiGo/handler"
 	"fmt"
 	"github.com/go-chi/chi"
 	"net/http"
@@ -8,7 +9,7 @@ import (
 
 func main() {
 
-	router := chi.NewRouter
+	router := chi.NewRouter()
 
 	router.Post("/api/v1/books", handler.CreateNewBook)
 	router.Get("/api/v1/books/{id}", handler.GetBook)
